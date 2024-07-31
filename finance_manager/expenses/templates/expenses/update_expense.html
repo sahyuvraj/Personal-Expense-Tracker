@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+<!-- templates/expenses/update_expense.html -->
+
+
+
+{% block title %}Update Expense{% endblock %}
+
+{% block content %}
+<h1 class="mt-5">Update Expense</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Save</button>
+</form>
+{% endblock %}
